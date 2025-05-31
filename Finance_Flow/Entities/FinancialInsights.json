@@ -1,0 +1,56 @@
+{
+  "name": "FinancialInsight",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the insight"
+    },
+    "content": {
+      "type": "string",
+      "description": "Detailed content of the financial insight"
+    },
+    "date_generated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the insight was generated"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "spending",
+        "saving",
+        "investing",
+        "debt",
+        "income",
+        "general"
+      ],
+      "description": "Category of the insight"
+    },
+    "priority_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Priority level of the insight"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "viewed",
+        "implemented",
+        "dismissed"
+      ],
+      "default": "new",
+      "description": "Status of the insight"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category"
+  ]
+}

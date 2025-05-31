@@ -1,0 +1,46 @@
+{
+  "name": "SavingsPlan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the savings plan"
+    },
+    "target_amount": {
+      "type": "number",
+      "description": "Target amount to save"
+    },
+    "monthly_contribution": {
+      "type": "number",
+      "description": "Monthly contribution amount"
+    },
+    "interest_rate": {
+      "type": "number",
+      "description": "Annual interest rate (if applicable)"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of the savings plan"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Expected end date of the savings plan"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Purpose of the savings plan"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the plan is currently active"
+    }
+  },
+  "required": [
+    "name",
+    "target_amount",
+    "monthly_contribution"
+  ]
+}

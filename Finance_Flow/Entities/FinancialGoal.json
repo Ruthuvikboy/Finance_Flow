@@ -1,0 +1,56 @@
+{
+  "name": "FinancialGoal",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the financial goal"
+    },
+    "target_amount": {
+      "type": "number",
+      "description": "Target amount to reach"
+    },
+    "current_amount": {
+      "type": "number",
+      "description": "Current amount saved/paid"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Deadline to achieve the goal"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "emergency_fund",
+        "debt_repayment",
+        "retirement",
+        "major_purchase",
+        "education",
+        "travel",
+        "home",
+        "other"
+      ],
+      "description": "Category of the financial goal"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed"
+      ],
+      "default": "not_started",
+      "description": "Current status of the goal"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the goal"
+    }
+  },
+  "required": [
+    "title",
+    "target_amount",
+    "category"
+  ]
+}

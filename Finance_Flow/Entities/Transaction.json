@@ -1,0 +1,60 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount (positive for income, negative for expenses)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the transaction"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the transaction"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "housing",
+        "transportation",
+        "food",
+        "utilities",
+        "insurance",
+        "healthcare",
+        "savings",
+        "debt",
+        "entertainment",
+        "personal",
+        "education",
+        "shopping",
+        "income",
+        "other"
+      ],
+      "description": "Category of the transaction"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "credit_card",
+        "debit_card",
+        "cash",
+        "bank_transfer",
+        "mobile_payment",
+        "other"
+      ],
+      "description": "Payment method used"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the transaction"
+    }
+  },
+  "required": [
+    "amount",
+    "date",
+    "category"
+  ]
+}
